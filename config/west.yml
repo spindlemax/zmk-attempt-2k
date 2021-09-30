@@ -2,12 +2,12 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: okke-formsma
-      url-base: https://github.com/okke-formsma
+    - name: cdc-mkb
+      url-base: https://github.com/cdc-mkb/zmk.git
   projects:
     - name: zmk
-      remote: okke-formsma
-      revision: macros
+      remote: cdc-mkb
+      revision: mouse-pim447
       import: app/west.yml
   self:
     path: config
