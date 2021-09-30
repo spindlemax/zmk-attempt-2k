@@ -77,7 +77,7 @@ bindings = <
 
 bindings = <
 	&kp ESC   &rgb_ug RGB_TOG  &rgb_ug RGB_COLOR_HSB(280,75,80) &rgb_ug RGB_COLOR_HSB(60,100,100) &rgb_ug RGB_COLOR_HSB(150,100,100) &rgb_ug RGB_COLOR_HSB(180,100,100)                                              &none         &none       &none        &none     &none    &none  
-	&to       &rgb_ug RGB_HUI  &rgb_ug RGB_SAI                  &rgb_ug RGB_BRI                   &rgb_ug RGB_SPI                    &rgb_ug RGB_EFF                                                                 &bt BT_SEL_0  &bt BT_PRV  &bt BT_NXT   &none     &none    &none  
+	&to       &rgb_ug RGB_HUI  &rgb_ug RGB_SAI                  &rgb_ug RGB_BRI                   &rgb_ug RGB_SPI                    &rgb_ug RGB_EFF                                                                 &bt BT_SEL 0  &bt BT_PRV  &bt BT_NXT   &none     &none    &none  
 	&to       &rgb_ug RGB_HUD  &rgb_ug RGB_SAD                  &rgb_ug RGB_BRD                   &rgb_ug RGB_SPI                    &rgb_ug RGB_EFR                    &kp F1 &kp F2         &bt BT_CLR &kp LS(F10) &none         &none       &none        &none     &none    &none  
 	                                                            &none                             &none                              &none                              &none  &none          &none      &none       &none         &none       &none 
 			>;
