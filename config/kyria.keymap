@@ -6,25 +6,87 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/mouse.h>
+
+#define DEFAULT 0
+#define NUMNAV 1 
+#define EXCEL 2
+#define function 3 
+#define RGB 4
+
+&left_encoder { resolution = <3>;};
+&right_encoder { resolution = <3>;};
 
 / {
 	keymap {
 		compatible = "zmk,keymap";
 
 		default_layer {
-// ---------------------------------------------------------------------------------------------------------------------------------
-// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
-// |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | L SHIFT | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
-//                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
-			bindings = <
-	&kp ESC   &kp Q &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
-	&kp TAB   &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-	&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT        &kp LSHFT &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-	                 &kp LGUI &kp DEL &kp RET &kp SPACE &kp ESC        &kp RET  &kp SPACE  &kp TAB &kp BSPC &kp RALT
+
+bindings = <
+	&kp ESC   &kp Q &kp W &kp E     &kp R    &kp T                                                   &kp Y     &kp U    &kp I     &kp O   &kp EQUAL &kp SEMI
+	&to 3     &kp A &kp S &kp D     &kp F    &kp G                                                   &kp SQT   &kp H     &kp J    &kp K   &kp L     &kp COMMA 
+	&to 1     &kp Z &kp X &kp C     &kp V    &kp BSLH &kp F1     &kp F2         &kp F4   &kp LS(F10) &kp FSLH  &kp B    &kp N     &kp M   &kp P     &kp DOT  
+	                      &kp LGUI  &kp TAB  &kp LALT  &kp LCTRL  &kp LSHFT      &kp RET  &kp SPACE   &kp BSPC  &kp DEL  &kp CAPS
 			>;
 
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+			sensor-bindings = <&inc_dec_kp LEFT RIGHT &inc_dec_kp PG_UP PG_DN>;
 		};
+		
+		
+		
+		NUMNAV_layer {
+
+bindings = <
+	&kp ESC  &kp HOME  &kp END   &kp PG_UP &kp PG_DN &kp LC(LBKT)                                                &kp EQUAL &kp N7 &kp N8 &kp N9 &kp MINUS  &kp SEMI
+	&to      &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp LC(RBKT)                                                &kp ASTRK &kp N4 &kp N5 &kp N6 &kp LS(N9) &KP COMMA
+	&to      &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(Y)      &kp F1    &kp F2         &kp F4  &kp LS(F10) &kp FSLH  &kp N1 &kp N2 &kp N3 &kp LS(N0) &kp DOT   
+	                             &kp RET   &kp TAB   &kp LALT       &kp LCTRL &kp LSHFT      &kp RET &kp SPACE   &kp BSPC  &kp N0 &kp C_AL_CALC
+			>;
+
+			sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp LC(PG_DN) LC(PG_UP) >;
+		};
+				
+		EXCEL_layer {
+
+bindings = <
+	&kp ESC  &kp LC(LS(Q)) &kp LC(LS(H)) &kp LA(EQUAL) &kp LC(MINUS)  &kp LS(LA(EQUAL))                                            &kp A       &kp A     &kp A    &kp A     &kp A &kp A
+	&to      &kp LC(M)     &kp LC(LS(M)) &kp LC(L)     &kp LC(LS(L))  &kp LC(N5)                                                   &kp A       &kp A     &kp A    &kp A     &kp A &kp A 
+	&to      &kp LA(N4)    &kp LA(N5)    &kp LA(LEFT   &kp LA(RIGHT)  &kp LS(F5)     &kp F1      &kp F2                &kp F4      &kp LS(F10) &kp FSLH  &kp A    &kp A     &kp A &kp A &kp A  
+	                                     &kp LGUI      &kp TAB        &kp LALT       &kp LCTRL   &kp LSHFT             &kp RET     &kp SPACE   &kp BSPC  &kp DEL  &kp CAPS
+			>;  
+			
+			sensor-bindings = <&inc_dec_kp LC(PG_DN) LC(PG_UP) &inc_dec_kp C_VOL_UP C_VOL_DN >;
+		};
+								
+		FUNCTION_layer {
+
+bindings = <
+	&kp ESC   &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                                                  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
+	&to      &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                                                   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp F12 
+	&to      &kp  &kp  &kp  &kp  &kp  &kp F1 &kp F2         &kp F4 &kp LS(F10) &kp FSLH  &kp  &kp  &kp  &kp  &kp   
+	                      &kp LGUI  &kp TAB  &kp LALT  &kp LCTRL  &kp LSHFT      &kp RET  &kp SPACE   &kp BSPC  &kp DEL  &kp CAPS
+			>;
+
+			sensor-bindings = <&inc_dec_kp LEFT RIGHT &inc_dec_kp PG_UP PG_DN>;
+		};
+						
+		RGB_layer {
+
+bindings = <
+	&kp ESC   &rgb_ug RGB_TOG  &rgb_ug RGB_COLOR_HSB(280,75,80) &rgb_ug RGB_COLOR_HSB(60,100,100) &rgb_ug RGB_COLOR_HSB(150,100,100) &rgb_ug RGB_COLOR_HSB(180,100,100)                                              &none         &none       &none        &none     &none    &none  
+	&to       &rgb_ug RGB_HUI  &rgb_ug RGB_SAI                  &rgb_ug RGB_BRI                   &rgb_ug RGB_SPI                    &rgb_ug RGB_EFF                                                                 &bt BT_SEL_0  &bt BT_PRV  &bt BT_NXT   &none     &none    &none  
+	&to       &rgb_ug RGB_HUD  &rgb_ug RGB_SAD                  &rgb_ug RGB_BRD                   &rgb_ug RGB_SPI                    &rgb_ug RGB_EFR                    &kp F1 &kp F2         &bt BT_CLR &kp LS(F10) &none         &none       &none        &none     &none    &none  
+	                                                            &none                             &none                              &none                              &none  &none          &none      &none       &none         &none       &none 
+			>;
+
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LC(Z) LC(Y) >;
+		};
+						
+		
+				
+		
 	};
 };
