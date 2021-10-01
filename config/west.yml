@@ -3,7 +3,7 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: cdc-mkb
-      url-base: https://github.com/cdc-mkb/zmk.git
+      url-base: https://github.com/
   projects:
     - name: zmk
       remote: cdc-mkb
