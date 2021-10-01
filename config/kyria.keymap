@@ -85,7 +85,7 @@ bindings = <
 	                                        &kp LGUI      &kp RET           &kp LCTRL         &mkp LCLK   &mkp RCLK             &kp RET     &kp SPACE    &kp BSPC       &kp DEL        &kp CAPS
 			>;  
 			
-			sensor-bindings = <&inc_dec_mwh SCROLL_DOWN SCROLL_UP &inc_dec_kp C_VOL_UP C_VOL_DN >;
+			sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp C_VOL_UP C_VOL_DN >;
 		};
 								
 		FUNCTION_layer {
