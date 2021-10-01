@@ -42,7 +42,7 @@ bindings = <
 bindings = <
 	&kp SEMI     &kp EQUAL &kp O     &kp U     &kp I     &kp Y                                                         &kp T     &kp R       &kp E    &kp W     &kp Q    &kp ESC 
         &kp COMMA    &kp L     &kp K     &kp J     &kp H     &kp SQT                                                       &kp G     &kp F       &kp D    &kp S     &kp A    &to 4                                                    
-	&kp DOT      &kp P     &kp M     &kp N     &kp B     &kp FLSH   &kp F4     &kp LS(F10)       &kp F1     &kp F2     &to BLSH  &kp V       &kp C    &kp X     &kp Z    &to 2           
+	&kp DOT      &kp P     &kp M     &kp N     &kp B     &kp FLSH   &kp F4     &kp LS(F10)       &kp F1     &kp F2     &kp BLSH  &kp V       &kp C    &kp X     &kp Z    &to 2           
 	                                 &to 0     &kp DEL   &kp BSPC   &kp SPACE  &kp RET           &kp LSHFT  &kp LCTRL  &kp LALT  &kp TAB     &kp LGUI 
 
 			>;
