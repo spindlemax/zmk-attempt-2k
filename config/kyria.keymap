@@ -73,7 +73,7 @@ bindings = <
 	                       &to 1  &kp N0 &kp BSPC    &kp SPACE  &kp RET            &kp LSHFT &kp LCTRL  &kp LALT  &kp TAB     &kp LGUI 
 			>;
 
-			sensor-bindings = < &inc_dec_kp LC(LS(TAB) LC(TAB) &inc_dec_kp DOWN UP >;
+			sensor-bindings = < &inc_dec_kp LC(LS(TAB)) LC(TAB) &inc_dec_kp DOWN UP >;
 		};
 							
 		EXCEL_layer {
