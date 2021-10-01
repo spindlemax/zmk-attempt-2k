@@ -61,7 +61,7 @@ bindings = <
 	                             &to 6     &kp TAB   &kp LALT       &kp LCTRL &kp LSHFT      &kp RET &kp SPACE   &kp BSPC  &kp N0 &kp C_AL_CALC
 			>;
 
-			sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp LC(LS(TAB) LC(TAB) >;
+			sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp LC(LS(TAB)) LC(TAB) >;
 		};
 				
 		FLIPNUMNAV_layer {
