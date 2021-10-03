@@ -34,7 +34,7 @@ bindings = <
 	                      &to 1     &kp TAB  &kp LALT  &kp LCTRL  &kp LSHFT       &kp SPACE &kp BSPC   &kp RET  &kp DEL  &kp CAPS
 			>;
 
-			sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp PG_DN PG_UP>;
+			sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp PG_UP PG_DN >;
 		};
 		
 		FLIPdefault_layer {
@@ -47,7 +47,7 @@ bindings = <
 
 			>;
 
-			sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp LEFT RIGHT>;
+			sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp RIGHT LEFT >;
 		};
 		
 				
@@ -61,7 +61,7 @@ bindings = <
 	                             &to 3     &kp TAB   &kp LALT       &kp LCTRL &kp LSHFT      &kp SPACE &kp BSPC  &kp RET  &kp N0 &kp C_AL_CALC
 			>;
 
-			sensor-bindings = <&inc_dec_kp DOWN UP  &inc_dec_kp LC(LS(TAB)) LC(TAB) >;
+			sensor-bindings = <&inc_dec_kp  UP DOWN &inc_dec_kp LC(LS(TAB)) LC(TAB) >;
 		};
 				
 		FLIPNUMNAV_layer {
@@ -73,7 +73,7 @@ bindings = <
 	                              &to 2  &kp N0 &kp BSPC    &kp SPACE  &kp RET            &kp LSHFT &kp LCTRL  &kp LALT  &kp TAB     &kp LGUI 
 			>;
 
-			sensor-bindings = < &inc_dec_kp LC(TAB) LC(LS(TAB)) &inc_dec_kp DOWN UP >;
+			sensor-bindings = < &inc_dec_kp LC(LS(TAB)) LC(TAB)  &inc_dec_kp DOWN UP >;
 		};
 							
 		MOUSE_layer {
@@ -85,7 +85,7 @@ bindings = <
 	                                        &kp LGUI      &kp RET           &mkp LCLK         &mkp RCLK             &mwh SCROLL_DOWN                 &kp SPACE   &kp BSPC     &kp RET           &kp DEL         &kp CAPS
 			>;  
 			
-			sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp C_VOL_UP C_VOL_DN >;
+			sensor-bindings = <&inc_dec_kp  UP DOWN &inc_dec_kp C_VOL_UP C_VOL_DN >;
 		};
 								
 		FUNCTION_layer {
@@ -93,11 +93,11 @@ bindings = <
 bindings = <
 	&kp ESC  &kp F1 &kp F2 &kp F3   &kp F4   &kp F5                                                   &kp F6    &kp F7   &kp F8   &kp F9 &kp F10  &kp F11
 	&to 6    &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                                                   &kp N6    &kp N7   &kp N8   &kp N9 &kp N0   &kp F12 
-	&to 4    &kp A  &kp A  &kp A    &kp A    &kp A     &kp F1     &kp F2         &kp F4   &kp LS(F10) &kp FSLH  &kp A    &kp A    &kp A  &kp A    &kp A  
+	&to 4    &kp R  &kp Y  &kp A    &kp N    &kp SPACE &kp F1     &kp F2         &kp F4   &kp LS(F10) &kp FSLH  &kp D   &kp A    &kp V  &kp I    &kp S  
 	                      &kp LGUI  &kp TAB  &kp LALT  &kp LCTRL  &kp LSHFT      &kp RET  &kp SPACE   &kp BSPC  &kp DEL  &kp CAPS
 			>;
 
-			sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp LEFT RIGHT >;
+			sensor-bindings = <&inc_dec_kp PG_UP PG_DN  &inc_dec_kp LEFT RIGHT >;
 		};
 						
 		RGB_layer {
