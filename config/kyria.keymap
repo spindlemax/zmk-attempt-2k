@@ -28,9 +28,9 @@
 		default_layer {
 
 bindings = <
-	&kp ESC   &kp Q &kp W &kp E     &kp R    &kp T                                                     &kp Y     &kp U    &kp I     &kp O   &kp EQUAL &kp SEMI
-	&to 4     &kp A &kp S &kp D     &kp F    &kp G                                                     &kp SQT   &kp H    &kp J     &kp K   &kp L     &kp COMMA 
-	&to 2     &kp Z &kp X &kp C     &kp V    &kp BSLH  &kp F1     &kp F2          &kp F4   &kp LS(F10) &kp FSLH  &kp B    &kp N     &kp M   &kp P     &kp DOT  
+	&kp ESC   &kp Q &kp W &kp E     &kp R    &kp T                                                     &kp Y     &kp U    &kp I     &kp O   &kp P     &kp EQUAL
+	&to 4     &kp A &kp S &kp D     &kp F    &kp G                                                     &kp SQT   &kp H    &kp J     &kp K   &kp L     &kp SEMI 
+	&to 2     &kp Z &kp X &kp C     &kp V    &kp BSLH  &kp F1     &kp F2          &kp F4   &kp LS(F10) &kp FSLH  &kp B    &kp N     &kp M   &kp COMMA &kp DOT  
 	                      &to 1     &kp TAB  &kp LALT  &kp LCTRL  &kp LSHFT       &kp SPACE &kp BSPC   &kp RET  &kp DEL  &kp CAPS
 			>;
 
@@ -40,10 +40,10 @@ bindings = <
 		FLIPdefault_layer {
 
 bindings = <
-	&kp SEMI     &kp EQUAL &kp O    &kp I &kp U          &kp Y                                                         &kp T     &kp R       &kp E    &kp W     &kp Q    &kp ESC 
-        &kp COMMA    &kp L     &kp K     &kp J     &kp H     &kp SQT                                                       &kp G     &kp F       &kp D    &kp S     &kp A    &to 4                                                    
-	&kp DOT      &kp P     &kp M     &kp N     &kp B     &kp FSLH   &kp F4     &kp LS(F10)       &kp F1     &kp F2     &kp BSLH  &kp V       &kp C    &kp X     &kp Z    &to 2           
-	                                 &to 0     &kp DEL   &kp RET    &kp BSPC   &kp SPACE         &kp LSHFT  &kp LCTRL  &kp LALT  &kp TAB     &kp LGUI 
+	&kp EQUAL     &kp P          &kp O     &kp I     &kp U     &kp Y                                                         &kp T     &kp R       &kp E    &kp W     &kp Q    &kp ESC 
+        &kp SEMI      &kp L          &kp K     &kp J     &kp H     &kp SQT                                                       &kp G     &kp F       &kp D    &kp S     &kp A    &to 4                                                    
+	&kp DOT       &kp COMMA      &kp M     &kp N     &kp B     &kp FSLH   &kp F4     &kp LS(F10)       &kp F1     &kp F2     &kp BSLH  &kp V       &kp C    &kp X     &kp Z    &to 2           
+	                                       &to 0     &kp DEL   &kp RET    &kp BSPC   &kp SPACE         &kp LSHFT  &kp LCTRL  &kp LALT  &kp TAB     &kp LGUI 
 
 			>;
 
@@ -55,10 +55,10 @@ bindings = <
 		NUMNAV_layer {
 
 bindings = <
-	&kp ESC  &kp HOME  &kp END   &kp PG_UP &kp PG_DN &kp LC(LBKT)                                                &kp EQUAL &kp N7 &kp N8 &kp N9 &kp MINUS  &kp SEMI
-	&to 0    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp LC(RBKT)                                                &kp ASTRK &kp N4 &kp N5 &kp N6 &kp LS(N9) &kp COMMA
-	&to 0    &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(Y)      &kp F1    &kp F2         &kp F4  &kp LS(F10) &kp FSLH  &kp N1 &kp N2 &kp N3 &kp LS(N0) &kp DOT   
-	                             &to 3     &kp TAB   &kp LALT       &kp LCTRL &kp LSHFT      &kp SPACE &kp BSPC  &kp RET  &kp N0 &kp C_AL_CALC
+	&kp ESC  &kp HOME  &kp END   &kp PG_UP &kp PG_DN &kp LC(LBKT)                                                &kp LS(N9) &kp N7 &kp N8 &kp N9 &kp MINUS  &kp EQUAL
+	&to 0    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp LC(RBKT)                                                &kp LS(N0) &kp N4 &kp N5 &kp N6 &kp ASTRK  &kp SEMI
+	&to 0    &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(Y)      &kp F1    &kp F2         &kp F4  &kp LS(F10) &kp FSLH   &kp N1 &kp N2 &kp N3 &kp COMMA  &kp DOT   
+	                             &to 3     &kp TAB   &kp LALT       &kp LCTRL &kp LSHFT      &kp SPACE &kp BSPC  &kp RET    &kp N0 &kp C_AL_CALC
 			>;
 
 			sensor-bindings = <&inc_dec_kp  UP DOWN &inc_dec_kp LC(LS(TAB)) LC(TAB) >;
@@ -67,9 +67,9 @@ bindings = <
 		FLIPNUMNAV_layer {
 
 bindings = <
-	  &kp EQUAL &kp SEMI   &kp N7 &kp N8 &kp N9 &kp MINUS                                                      &kp ESC   &kp HOME    &kp END   &kp PG_UP &kp PG_DN &kp LC(LBKT)
-	  &kp ASTRK &kp COMMA  &kp N4 &kp N5 &kp N6 &kp LS(N9)                                                     &to 0     &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT &kp LC(RBKT)
-          &kp FSLH  &kp DOT    &kp N1 &kp N2 &kp N3 &kp LS(N0)  &kp F4     &kp LS(F10)        &kp F1    &kp F2     &to 0     &kp LC(Z)   &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(Y)
+	  &kp EQUAL &kp MINUS   &kp N7 &kp N8 &kp N9 &kp LS(N9)                                                    &kp ESC   &kp HOME    &kp END   &kp PG_UP &kp PG_DN &kp LC(LBKT)
+	  &kp SEMI  &kp ASTRK   &kp N4 &kp N5 &kp N6 &kp LS(N0)                                                    &to 0     &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT &kp LC(RBKT)
+          &kp DOT   &kp COMMA   &kp N1 &kp N2 &kp N3 &kp FLSH   &kp F4     &kp LS(F10)        &kp F1    &kp F2     &to 0     &kp LC(Z)   &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(Y)
 	                              &to 2  &kp N0 &kp BSPC    &kp SPACE  &kp RET            &kp LSHFT &kp LCTRL  &kp LALT  &kp TAB     &kp LGUI 
 			>;
 
