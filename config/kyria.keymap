@@ -29,9 +29,9 @@
 
 bindings = <
 	&kp ESC   &kp Q &kp W &kp E     &kp R    &kp T                                                     &kp Y     &kp U    &kp I     &kp O   &kp P     &kp EQUAL
-	&to 4     &kp A &kp S &kp D     &kp F    &kp G                                                     &kp SQT   &kp H    &kp J     &kp K   &kp L     &kp SEMI 
+	&to 0     &kp A &kp S &kp D     &kp F    &kp G                                                     &kp SQT   &kp H    &kp J     &kp K   &kp L     &kp SEMI 
 	&to 2     &kp Z &kp X &kp C     &kp V    &kp BSLH  &kp F2     &kp F1          &kp F4   &kp LS(F10) &kp FSLH  &kp B    &kp N     &kp M   &kp COMMA &kp DOT  
-	                      &to 1     &kp TAB  &kp LALT  &kp LCTRL  &kp LSHFT       &kp SPACE &kp BSPC   &kp RET  &kp DEL  &kp CAPS
+	                      &to 1     &kp TAB  &kp LALT  &kp LCTRL  &kp LSHFT       &kp RET  &kp SPACE &kp BSPC    &kp DEL  &kp CAPS
 			>;
 
 			sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp PG_UP PG_DN >;
@@ -40,10 +40,10 @@ bindings = <
 		FLIPdefault_layer {
 
 bindings = <
-	&kp EQUAL     &kp P          &kp O     &kp I     &kp U     &kp Y                                                         &kp T     &kp R       &kp E    &kp W     &kp Q    &kp ESC 
+	&to 5         &kp P          &kp O     &kp I     &kp U     &kp Y                                                         &kp T     &kp R       &kp E    &kp W     &kp Q    &kp ESC 
         &kp SEMI      &kp L          &kp K     &kp J     &kp H     &kp SQT                                                       &kp G     &kp F       &kp D    &kp S     &kp A    &to 4                                                    
 	&kp DOT       &kp COMMA      &kp M     &kp N     &kp B     &kp FSLH   &kp F4     &kp LS(F10)       &kp F1     &kp F2     &kp BSLH  &kp V       &kp C    &kp X     &kp Z    &to 2           
-	                                       &to 0     &kp DEL   &kp RET    &kp BSPC   &kp SPACE         &kp LSHFT  &kp LCTRL  &kp LALT  &kp TAB     &kp LGUI 
+	                                       &to 0     &kp DEL   &kp BSPC   &kp SPACE  &kp RET           &kp LSHFT  &kp LCTRL  &kp LALT  &kp TAB     &kp LGUI 
 
 			>;
 
@@ -55,9 +55,9 @@ bindings = <
 		NUMNAV_layer {
 
 bindings = <
-	&kp ESC  &kp HOME  &kp END   &kp PG_UP &kp PG_DN &kp LC(LBKT)                                                &kp LS(N9) &kp N7 &kp N8 &kp N9 &kp MINUS  &kp EQUAL
-	&to 0    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp LC(RBKT)                                                &kp LS(N0) &kp N4 &kp N5 &kp N6 &kp ASTRK  &kp SEMI
-	&to 0    &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(Y)      &kp F2    &kp F1         &kp F4  &kp LS(F10) &kp FSLH   &kp N1 &kp N2 &kp N3 &kp COMMA  &kp DOT   
+	&kp ESC  &kp HOME  &kp END   &kp PG_UP &kp PG_DN &kp LBKT                                                    &kp LS(N9) &kp N7 &kp N8 &kp N9 &kp MINUS  &kp EQUAL
+	&to 0    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp RBKT                                                    &kp LS(N0) &kp N4 &kp N5 &kp N6 &kp ASTRK  &kp SEMI
+	&to 2    &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(Y)      &kp F2    &kp F1         &kp F4  &kp LS(F10) &kp FSLH   &kp N1 &kp N2 &kp N3 &kp COMMA  &kp DOT   
 	                             &to 3     &kp TAB   &kp LALT       &kp LCTRL &kp LSHFT      &kp SPACE &kp BSPC  &kp RET    &kp N0 &kp C_AL_CALC
 			>;
 
@@ -80,20 +80,34 @@ bindings = <
 
 bindings = <
 	&kp ESC  &kp HOME       &kp END         &kp PG_UP     &kp PG_DN         &kp LCTRL                                                                                         &kp C_VOL_UP      &kp C_VOL_DN    &kp C_MUTE      &kp C_REPEAT         &kp C_SHUFFLE    &kp C_SNAPSHOT   
-	&to 5    &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT   &mwh SCROLL_UP                                                                                    &kp C_PP          &kp C_NEXT      &kp C_PREV      &kp C_FAST_FORWARD   &kp C_REWIND     &kp C_CAPTIONS
-	&to 0    &mkp MCLK      &mkp MB4        &mkp MB5      &mkp MB6          &mkp MB7          &kp C_AC_ZOOM_IN      &kp C_AC_ZOOM_OUT                &kp F4      &kp LS(F10)  &kp  C_AC_SAVE    &kp C_AC_NEW    &kp C_AC_OPEN   &kp C_AC_FIND        &kp C_AL_CALC    &kp C_AL_TASK_MANAGER
+	&to 0    &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT   &mwh SCROLL_UP                                                                                    &kp C_PP          &kp C_NEXT      &kp C_PREV      &kp C_FAST_FORWARD   &kp C_REWIND     &kp C_CAPTIONS
+	&to 2    &mkp MCLK      &mkp MB4        &mkp MB5      &mkp MB6          &mkp MB7          &kp C_AC_ZOOM_IN      &kp C_AC_ZOOM_OUT                &kp F4      &kp LS(F10)  &kp  C_AC_SAVE    &kp C_AC_NEW    &kp C_AC_OPEN   &kp C_AC_FIND        &kp C_AL_CALC    &kp C_AL_TASK_MANAGER
 	                                        &kp LGUI      &kp RET           &mkp LCLK         &mkp RCLK             &mwh SCROLL_DOWN                 &kp SPACE   &kp BSPC     &kp RET           &kp DEL         &kp CAPS
 			>;  
 			
 			sensor-bindings = <&inc_dec_kp  UP DOWN &inc_dec_kp C_VOL_UP C_VOL_DN >;
 		};
-								
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+	
 		FUNCTION_layer {
 
 bindings = <
 	&kp ESC  &kp F1 &kp F2 &kp F3   &kp F4   &kp F5                                                   &kp F6    &kp F7   &kp F8   &kp F9 &kp F10  &kp F11
 	&to 6    &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                                                   &kp N6    &kp N7   &kp N8   &kp N9 &kp N0   &kp F12 
-	&to 4    &kp R  &kp Y  &kp A    &kp N    &kp SPACE &kp F2     &kp F1         &kp F4   &kp LS(F10) &kp FSLH  &kp D   &kp A    &kp V  &kp I    &kp S  
+	&to 4    &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE    &kp K_PP    &kp SPACE &kp F2     &kp F1         &kp F4   &kp LS(F10) &kp FSLH  &kp LBKT  &kp RBKT    &kp GRAVE  &kp DOT &kp COMMA
 	                      &kp LGUI  &kp TAB  &kp LALT  &kp LCTRL  &kp LSHFT      &kp SPACE &kp BSPC   &kp RET   &kp DEL  &kp CAPS
 			>;
 
