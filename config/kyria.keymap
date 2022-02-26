@@ -29,7 +29,7 @@ bindings = <
 	&kp ESC   &kp Q &kp W &kp E     &kp R    &kp T                                                     &kp Y     &kp U    &kp I     &kp O   &kp P     &kp EQUAL
 	&to 0     &kp A &kp S &kp D     &kp F    &kp G                                                     &kp SQT   &kp H    &kp J     &kp K   &kp L     &kp SEMI 
 	&to 2     &kp Z &kp X &kp C     &kp V    &kp BSLH  &kp F2     &kp F1          &kp F4   &kp LS(F10) &kp FSLH  &kp B    &kp N     &kp M   &kp COMMA &kp DOT  
-	                      &to 1     &kp TAB  &kp LALT  &kp LCTRL  &kp LSHFT       &kp RET  &kp SPACE &kp BSPC    &kp DEL  &kp CAPS
+	                      &to 1     &kp TAB  &kp LALT  &kp LCTRL  &kp LSHFT       &kp RET  &kp SPACE &kp BSPC    &kp CAPS  &kp DEL
 			>;
 
 			sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp PG_UP PG_DN >;
@@ -56,7 +56,7 @@ bindings = <
 	&kp ESC  &kp HOME  &kp END   &kp PG_UP &kp PG_DN &kp LBKT                                                    &kp LS(N9) &kp N7 &kp N8 &kp N9 &kp MINUS  &kp EQUAL
 	&to 0    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp RBKT                                                    &kp LS(N0) &kp N4 &kp N5 &kp N6 &kp ASTRK  &kp SEMI
 	&to 2    &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(Y)      &kp F2    &kp F1         &kp F4  &kp LS(F10) &kp FSLH   &kp N1 &kp N2 &kp N3 &kp COMMA  &kp DOT   
-	                             &to 3     &kp TAB   &kp LALT       &kp LCTRL &kp LSHFT      &kp SPACE &kp BSPC  &kp RET    &kp DEL &kp N0
+	                             &to 3     &kp TAB   &kp LALT       &kp LCTRL &kp LSHFT      &kp SPACE &kp BSPC  &kp RET    &kp N0 &kp DEL 
 				        
 			>;
 
